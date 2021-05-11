@@ -15,7 +15,7 @@ class User:
 
     def transfer_money(self, amount, User):
         self.account_balance -= amount
-        User.account_balance += amount
+        User.account_balance += amount          ### NB: call can be made to the attribute of another User's record, as opposed to "self's"
 
 guido = User("Guido van Rossum", "guido@python.com")
 monty = User("Monty Python", "monty@python.com")
